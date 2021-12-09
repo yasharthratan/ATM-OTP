@@ -57,7 +57,7 @@ This shows that to get similar security levels on both RSA and Elliptic Curve, t
 ### How To Use
  > The application is compatible with Linux system **only**.
 - #### Running the application-
-	1. git clone https://github.com/shaswatsunny1998/Crypto-project.git
+	1. git clone https://github.com/yasharthratan/ATM-OTP.git
 	2. cd Crypto-projcect-master
 	3. cd Preserved
 	4. Type   `./server`
