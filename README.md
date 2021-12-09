@@ -45,9 +45,9 @@ This shows that to get similar security levels on both RSA and Elliptic Curve, t
 
 ## Files
 - In this project we have created 3 C++ files namely - 
-	1. [Server.cpp](https://github.com/shaswatsunny1998/Crypto-project/blob/master/Preserved/server.cpp)- This file contains all the ECC algorithm and generation of OTP. It also contains the source code of creating a TCP socket and binding it. It is responsible for sending the message buffer to the client. 
-	2. [Client.cpp](https://github.com/shaswatsunny1998/Crypto-project/blob/master/Preserved/client.cpp)- This file contains all the ECC algorithm along with the listening socket for the client. When the sever is sending some message to the socket, the client is listening the socket and message buffer from the server and decode the message and show the output.
-	3. [FiniteFieldElement.hpp](https://github.com/shaswatsunny1998/Crypto-project/blob/master/Preserved/FiniteFieldElement.hpp)- This file is the header file. Since Elliptical curve cryptography is a part of the finite field. So, all the operations that happened in the ECC are the abelian group operations of the Finite Field Element. All the element operations are defined in this file along with the utils function and point representation of the ECC point.
+	1. [Server.cpp](https://github.com/yasharthratan/ATM-OTP/blob/main/Preserved/server.cpp)- This file contains all the ECC algorithm and generation of OTP. It also contains the source code of creating a TCP socket and binding it. It is responsible for sending the message buffer to the client. 
+	2. [Client.cpp](https://github.com/yasharthratan/ATM-OTP/blob/main/Preserved/client.cpp)- This file contains all the ECC algorithm along with the listening socket for the client. When the sever is sending some message to the socket, the client is listening the socket and message buffer from the server and decode the message and show the output.
+	3. [FiniteFieldElement.hpp](https://github.com/yasharthratan/ATM-OTP/blob/main/Preserved/FiniteFieldElement.hpp)- This file is the header file. Since Elliptical curve cryptography is a part of the finite field. So, all the operations that happened in the ECC are the abelian group operations of the Finite Field Element. All the element operations are defined in this file along with the utils function and point representation of the ECC point.
 
 
 
