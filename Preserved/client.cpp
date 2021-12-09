@@ -430,21 +430,21 @@ int main()
     cout << "G = " << G << ", order(G) is " << G.Order() << "\n\n";
     int a = irand(1,myEllipticCurve.Degree()-1);
     ec_t::Point Pa = a*G;  // public key
-    cout << "Shaswat's public key Pa = " << a << "*" << G << " = " << Pa << endl<<"\n";
+    cout << "Yasharth's public key Pa = " << a << "*" << G << " = " << Pa << endl<<"\n";
     int b = irand(1,myEllipticCurve.Degree()-1);;
-    cout<<"Amitesh's private key is b = "<<b<<endl;
+    cout<<"Aarushi's private key is b = "<<b<<endl;
     ec_t::Point Pb = b*G;  // public key
-    cout << "Amitesh's public key Pb = " << b << "*" << G << " = " << Pb << endl<<"\n";
+    cout << "Aarushi's public key Pb = " << b << "*" << G << " = " << Pb << endl<<"\n";
     int j = irand(1,myEllipticCurve.Degree()-1);;
     ec_t::Point Pj = j*G;
-    cout << "Mam's public key Pj = " << j << "*" << G << " = " << Pj << endl;
+    cout << "Keshav's public key Pj = " << j << "*" << G << " = " << Pj << endl;
     //shared key comes out to be (24,35)
     cout << "\n\n";
     ec_t::Point Pk = a*Pb;
-    cout << "Shared secret between Shaswat and Amitesh Pk = " << a << "*" << Pb <<" = " << Pk << endl;
+    cout << "Shared secret between Yasharth and Aarushi Pk = " << a << "*" << Pb <<" = " << Pk << endl;
     ec_t::ffe_t c1( m1*Pk.x() );
     ec_t::ffe_t c2( m2*Pk.y() );
-    cout << "Message Read from Shaswat = {Pa,(c1,c2)} = {" << Pa << ", (" << c1 << ", " << c2 << ")}\n\n";
+    cout << "Message Read from Yasharth = {Pa,(c1,c2)} = {" << Pa << ", (" << c1 << ", " << c2 << ")}\n\n";
     Pk = b*Pa;
     ec_t::ffe_t m1d = c1/Pk.x();
     ec_t::ffe_t m2d = c2/Pk.y();
