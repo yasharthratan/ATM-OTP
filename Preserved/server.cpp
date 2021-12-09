@@ -373,24 +373,24 @@ int main()
     m2=b1*10+a1;
     m1=d*10+c;
     cout<<"\n\n";
-    cout<<"Shaswat's private key is a = "<<a<<endl;
+    cout<<"Yasharth's private key is a = "<<a<<endl;
     ec_t::Point Pa = a*G;  // public key
-    cout << "Shaswat's public key Pa = " << a << "*" << G << " = " << Pa << endl<<"\n";
+    cout << "Yasharth's public key Pa = " << a << "*" << G << " = " << Pa << endl<<"\n";
     int b = irand(1,myEllipticCurve.Degree()-1);;
     ec_t::Point Pb = b*G;  // public key
-    cout << "Amitesh's public key Pb = " << b << "*" << G << " = " << Pb << endl<<"\n";
+    cout << "Aarushi's public key Pb = " << b << "*" << G << " = " << Pb << endl<<"\n";
     int j = irand(1,myEllipticCurve.Degree()-1);;
     ec_t::Point Pj = j*G;
-    cout << "Mam's public key Pj = " << j << "*" << G << " = " << Pj << endl;
+    cout << "Keshav's public key Pj = " << j << "*" << G << " = " << Pj << endl;
     //shared key comes out to be (24,35)
     cout << "\n\n";
-    cout << "Plain text message from Shaswat to Amitesh: (" << m1 << ", " << m2 << ")\n";
+    cout << "Plain text message from Yasharth to Aarushi: (" << m1 << ", " << m2 << ")\n";
     ec_t::Point Pk = a*Pb;
-    cout << "Shared secret between Shaswat and Amitesh Pk = " << a << "*" << Pb <<" = " << Pk << endl;
+    cout << "Shared secret between Yasharth and Aarushi Pk = " << a << "*" << Pb <<" = " << Pk << endl;
     ec_t::ffe_t c1( m1*Pk.x() );
     ec_t::ffe_t c2( m2*Pk.y() );
-    cout << "Encrypted message from Shaswat to Amitesh = (m.x*Pk.x, m.y*Pk.y) = " <<"(" << c1 << ", " << c2 << ")\n\n";
-    cout << "Shaswat sends Amitesh = {Pa,(c1,c2)} = {" << Pa << ", (" << c1 << ", " << c2 << ")}\n\n";
+    cout << "Encrypted message from Yasharth to Aarushi = (m.x*Pk.x, m.y*Pk.y) = " <<"(" << c1 << ", " << c2 << ")\n\n";
+    cout << "Yasharth sends Aarushi = {Pa,(c1,c2)} = {" << Pa << ", (" << c1 << ", " << c2 << ")}\n\n";
     Pk = b*Pa;
     ec_t::ffe_t m1d = c1/Pk.x();
     ec_t::ffe_t m2d = c2/Pk.y();
@@ -443,8 +443,8 @@ int main()
     }
     else
     {
-        cout << "Mam's (the eavesdropper) private key Pj = " << j<< endl;
-        cout << "\nMam's decrypted message from Shaswat(Evasdropper) is = (" << m1d << ", " << m2d << ")" << endl;
+        cout << "Keshav's (the eavesdropper) private key Pj = " << j<< endl;
+        cout << "\nKeshav's decrypted message from Yasharth(Evasdropper) is = (" << m1d << ", " << m2d << ")" << endl;
         printf("\nServer acccept the client...\n");
     }
 
